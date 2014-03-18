@@ -29,16 +29,7 @@ Exemplo:
 
 Este código é usado para chamar a dll nativa de uma linguagem baseada no Windows Framework, onde não é permitido o uso por referencia de uma dll que não seja criada para código CLR. No exemplo abaixo é possível chamar a senha wieless descriptografada diretamente do C#.
 
-Visual Studio
+Visual Studio - C#
 
 Por Exemplo, no visual Studio para poder compilar código unmanaged é necessário alterar as propriedades do projeto. Na janela de propriedades do projeto, na opção Debug, Enable Debug, clique em: Enable Native Code Debugging.
-
-C#
-
-[DllImport("dawifiperfiex.dll", EntryPoint = "#4",
-            CallingConvention = CallingConvention.Cdecl,
-            CharSet = CharSet.Unicode)]
-  
-        [return: MarshalAs(UnmanagedType.LPTStr)]
-        public static extern string Senha ();
  
